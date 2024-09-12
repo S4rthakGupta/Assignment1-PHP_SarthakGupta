@@ -8,6 +8,7 @@
 </head>
 <body>
     
+
 <header class="header">
     <h1>Fitness<span class="h-span">Class</span></h1>
     <nav class="navbar">
@@ -21,15 +22,7 @@
 <main>
 
     <?php 
-        function strcat($left, $right)
-        {
-        $combinedString = $left . $right;
-        return $combinedString;
-        }
-        $first = "This is a ";
-        $second = " complete sentence!";
-        echo strcat($first, $second);
-        
+
     ?>
 </main>
 
