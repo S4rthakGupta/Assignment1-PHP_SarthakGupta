@@ -9,15 +9,27 @@
 <body>
     
 <header>
-    <div class="header">This is a test statement</div>
+    <nav class="navbar">
+        <ul>
+            <li>Home</li>
+            <li>About Me</li>    
+        </ul>
+    </nav>
 </header>
-
-<nav>
-
-</nav>
 
 <main>
 
+    <?php 
+        function strcat($left, $right)
+        {
+        $combinedString = $left . $right;
+        return $combinedString;
+        }
+        $first = "This is a ";
+        $second = " complete sentence!";
+        echo strcat($first, $second);
+        
+    ?>
 </main>
 
 <footer>

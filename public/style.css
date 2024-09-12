@@ -1,10 +1,13 @@
-.header
+.navbar
 {
-    background-color: blue;
-    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+}
 
-
-
-
-
+.navbar ul li
+{
+    list-style: none;
+    text-decoration: none;
 }
