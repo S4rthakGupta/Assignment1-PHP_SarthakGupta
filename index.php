@@ -27,7 +27,7 @@
 
     <!-- The content for the main body starts from here. -->
     <main>
-        <form action="your_php_script.php" method="post" class="form-grid">
+        <form method="post" class="form-grid" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
             <div class="form-group">
                 <label for="first_name">First Name:</label>
                 <input type="text" id="first_name" name="first_name" required>
@@ -54,13 +54,23 @@
             </div>
 
             <div class="form-group">
-                <label for="address">Address:</label>
-                <input type="text" id="address" name="address" required>
+                <label for="emergency_contact">Emergency Contact Number:</label>
+                <input type="tel" id="emergency_contact" name="emergency_contact" required>
             </div>
 
             <div class="form-group">
-                <label for="emergency_contact">Emergency Contact Number:</label>
-                <input type="tel" id="emergency_contact" name="emergency_contact" required>
+                <label for="membership_number">Membership Number (if applicable):</label>
+                <input type="text" id="membership_number" name="membership_number">
+            </div>
+
+            <div class="form-group">
+                <label for="referral_source">How Did You Hear About Us?</label>
+                <input type="text" id="referral_source" name="referral_source">
+            </div>
+
+            <div class="form-group full-width">
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required>
             </div>
 
             <div class="form-group full-width">
@@ -83,8 +93,17 @@
             </div>
 
             <div class="form-group full-width">
+                <label for="medical_conditions">Medical Conditions or Allergies:</label>
+                <textarea id="medical_conditions" name="medical_conditions" placeholder="Please list any relevant medical conditions or allergies"></textarea>
+            </div>
+                        
+            <div class="form-group full-width">
                 <label for="comment">Additional Comments:</label>
                 <textarea id="comment" name="comment"></textarea>
+            </div>
+
+            <div class="form-group full-width">
+                <input type="submit" value="Submit" required>
             </div>
         </form>
     </main>
