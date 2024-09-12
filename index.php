@@ -11,7 +11,6 @@
 </head>
 
 <!-- Content for the body starts from here. -->
-
 <body>
 
     <!-- This is the header and the navbar. It is consistent across all pages. -->
@@ -28,7 +27,6 @@
     </header>
 
     <?php
-
     $firstNameErr = $lastNameErr = $dobErr = $emailErr = $phoneErr = $emergencyContactErr = $genderErr = $batchErr = $addressErr = "";
     $firstName = $lastName = $dateOfBirth = $email = $phoneNumber = $emergencyContact = $membershipNumber = $referralSource = $address = $gender = $batch = $medicalConditions = $comment = "";
 
@@ -79,7 +77,7 @@
             $birthDate = new DateTime($dateOfBirth);
             $today = new DateTime();
             $age = $today->diff($birthDate)->y;
-        
+
             if ($age < 18) {
                 $dobErr = "You must be at least 18 years old to register";
                 $isValid = false;
@@ -128,7 +126,6 @@
             $isValid = false;
         } else {
             $address = test_input($_POST["address"]);
-            $isValid = false;
         }
 
         // Validate Gender
@@ -137,7 +134,6 @@
             $isValid = false;
         } else {
             $gender = test_input($_POST["gender"]);
-            $isValid = false;
         }
 
         // Validate Batch
@@ -146,7 +142,6 @@
             $isValid = false;
         } else {
             $batch = test_input($_POST["batch"]);
-            $isValid = false;
         }
 
         // Optional fields
@@ -155,6 +150,11 @@
         $medicalConditions = test_input($_POST["medical_conditions"]);
         $comment = test_input($_POST["comment"]);
 
+        // Redirect to success.php if all validations are correct
+        if ($isValid) {
+            header("Location: success.php");
+            exit();
+        }
     }
     ?>
 
