@@ -27,18 +27,22 @@
 
     <!-- The content for the main body starts from here. -->
     <main>
+        <label for="first_name">First Name:</label>
+        <input type="text" id="first_name" name="first_name" required>
+        <br>
+        
+        <label for="last_name">Last Name:</label>
+        <input type="text" id="last_name" name="last_name" required>
+        <br>
 
-        <?php
-        function strcat($left, $right)
-        {
-            $combinedString = $left . $right;
-            return $combinedString;
-        }
-        $first = "This is a ";
-        $second = " complete sentence!";
-        echo strcat($first, $second);
+        <label for="date_of_birth">Date of Birth:</label>
+        <input type="date" id="date_of_birth" name="date_of_birth" required><br><br>
 
-        ?>
+        <label for="gender">Gender:</label>
+        <input type="radio" name="gender" value="Male">Male
+        <input type="radio" name="gender" value="Female">Female
+        <input type="radio" name="gender" value="Other">Other
+
     </main>
 
     <!-- This is the footer and is consistent across all pages. -->
