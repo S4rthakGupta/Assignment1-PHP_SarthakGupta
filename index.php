@@ -25,37 +25,52 @@
         </nav>
     </header>
 
+    <?php
+
+        $first_name = $last_name = $date_of_birth = $email = $phone_number = $emergency_contact = $membership_number = $referral_source = $address = $gender = $batch = $medical_conditions = $comment = "";
+
+        $firstNameErr = "";
+ 
+        if ($_SERVER["REQUEST_METHOD"] == "POST")
+        {
+
+        }
+
+    ?>
+
+
     <!-- The content for the main body starts from here. -->
     <main>
-        <form method="post" class="form-grid" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
+        <form method="POST" class="form-grid" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
             <div class="form-group">
                 <label for="first_name">First Name:</label>
-                <input type="text" id="first_name" name="first_name" required>
+                <input type="text" id="first_name" name="first_name">
+                <span class="error">*<?php echo $firstNameErr; ?></span>
             </div>
 
             <div class="form-group">
                 <label for="last_name">Last Name:</label>
-                <input type="text" id="last_name" name="last_name" required>
+                <input type="text" id="last_name" name="last_name">
             </div>
 
             <div class="form-group">
                 <label for="date_of_birth">Date of Birth:</label>
-                <input type="date" id="date_of_birth" name="date_of_birth" required>
+                <input type="date" id="date_of_birth" name="date_of_birth">
             </div>
 
             <div class="form-group">
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email">
             </div>
 
             <div class="form-group">
                 <label for="phone_number">Phone Number:</label>
-                <input type="tel" id="phone_number" name="phone_number" required>
+                <input type="tel" id="phone_number" name="phone_number">
             </div>
 
             <div class="form-group">
                 <label for="emergency_contact">Emergency Contact Number:</label>
-                <input type="tel" id="emergency_contact" name="emergency_contact" required>
+                <input type="tel" id="emergency_contact" name="emergency_contact">
             </div>
 
             <div class="form-group">
@@ -70,13 +85,13 @@
 
             <div class="form-group full-width">
                 <label for="address">Address:</label>
-                <input type="text" id="address" name="address" required>
+                <input type="text" id="address" name="address">
             </div>
 
             <div class="form-group full-width">
                 <fieldset>
                     <legend>Gender:</legend>
-                    <label><input type="radio" id="male" name="gender" value="Male" required> Male</label>
+                    <label><input type="radio" id="male" name="gender" value="Male"> Male</label>
                     <label><input type="radio" id="female" name="gender" value="Female"> Female</label>
                     <label><input type="radio" id="other" name="gender" value="Other"> Other</label>
                 </fieldset>
@@ -85,7 +100,7 @@
             <div class="form-group full-width">
                 <fieldset>
                     <legend>Choose a Batch:</legend>
-                    <label><input type="radio" id="slot1" name="batch" value="Slot1" required> Slot 1 (9:00am to 12:00pm)</label>
+                    <label><input type="radio" id="slot1" name="batch" value="Slot1"> Slot 1 (9:00am to 12:00pm)</label>
                     <label><input type="radio" id="slot2" name="batch" value="Slot2"> Slot 2 (12:00pm to 3:00pm)</label>
                     <label><input type="radio" id="slot3" name="batch" value="Slot3"> Slot 3 (3:00pm to 6:00pm)</label>
                     <label><input type="radio" id="slot4" name="batch" value="Slot4"> Slot 4 (6:00pm to 9:00pm)</label>
@@ -103,7 +118,7 @@
             </div>
 
             <div class="form-group full-width">
-                <input type="submit" value="Submit" required>
+                <input type="submit" value="Submit">
             </div>
         </form>
     </main>
