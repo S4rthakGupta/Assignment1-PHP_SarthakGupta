@@ -1,3 +1,8 @@
+<?php
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,79 +51,97 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Validate First Name
     if (empty($_POST["first_name"])) {
         $firstNameErr = "First Name is required";
+        $isValid = false;
     } else {
         $firstName = test_input($_POST["first_name"]);
         if (!preg_match("/^[a-zA-Z-' ]*$/", $firstName)) {
             $firstNameErr = "Only letters and spaces are allowed";
+            $isValid = false;
         }
     }
 
     // Validate Last Name
     if (empty($_POST["last_name"])) {
         $lastNameErr = "Last Name is required";
+        $isValid = false;
     } else {
         $lastName = test_input($_POST["last_name"]);
         if (!preg_match("/^[a-zA-Z-' ]*$/", $lastName)) {
             $lastNameErr = "Only letters and spaces are allowed";
+            $isValid = false;
         }
     }
 
     // Validate Date of Birth
     if (empty($_POST["date_of_birth"])) {
         $dobErr = "Date of Birth is required";
+        $isValid = false;
     } else {
         $dateOfBirth = test_input($_POST["date_of_birth"]);
+        $isValid = false;
     }
 
     // Validate Email
     if (empty($_POST["email"])) {
         $emailErr = "Email is required";
+        $isValid = false;
     } else {
         $email = test_input($_POST["email"]);
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             $emailErr = "Invalid email format";
+            $isValid = false;
         }
     }
 
     // Validate Phone Number
     if (empty($_POST["phone_number"])) {
         $phoneErr = "Phone Number is required";
+        $isValid = false;
     } else {
         $phoneNumber = test_input($_POST["phone_number"]);
         if (!preg_match("/^[0-9]{10}$/", $phoneNumber)) {
             $phoneErr = "Invalid phone number format";
+            $isValid = false;
         }
     }
 
     // Validate Emergency Contact
     if (empty($_POST["emergency_contact"])) {
         $emergencyContactErr = "Emergency Contact Number is required";
+        $isValid = false;
     } else {
         $emergencyContact = test_input($_POST["emergency_contact"]);
         if (!preg_match("/^[0-9]{10}$/", $emergencyContact)) {
             $emergencyContactErr = "Invalid phone number format";
+            $isValid = false;
         }
     }
 
     // Validate Gender
     if (empty($_POST["address"])) {
         $addressErr = "Address is required";
+        $isValid = false;
     } else {
         $address = test_input($_POST["address"]);
+        $isValid = false;
     }
     
     // Validate Gender
     if (empty($_POST["gender"])) {
         $genderErr = "Gender is required";
+        $isValid = false;
     } else {
         $gender = test_input($_POST["gender"]);
+        $isValid = false;
     }
 
     // Validate Batch
     if (empty($_POST["batch"])) {
         $batchErr = "Please choose a batch";
+        $isValid = false;
     } else {
         $batch = test_input($_POST["batch"]);
+        $isValid = false;
     }
 
     // Optional fields
