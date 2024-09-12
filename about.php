@@ -6,7 +6,7 @@
     <!-- This is the title for the About me page. -->
     <title>About Me</title>
     <!-- Linking the CSS file which is placed in the public folder. -->
-    <link rel="stylesheet" href="public/style.css">
+    <link rel="stylesheet" href="public/CSS/style.css">
 </head>
 
 <!-- Content for the body starts from here. -->
@@ -27,12 +27,30 @@
 
     <!-- The content for the main body starts from here. -->
     <main>
-        <div class="container">
-            <h1>About Me</h1>
-        </div>
-        <p>I am Sarthak Gupta, an Aspiring Full-Stack Developer who is passionate to learn about technology and to connect with like-minded professionals in the industry</p>
+    <div class="container">
+            <h1 class="main-h1">About Me</h1>
+                <p class="intro-text">
+                    I am <i>Sarthak Gupta</i>, an aspiring<strong> Full-Stack Developer</strong> with a deep passion for technology and innovation. I specialize in creating dynamic, responsive, and user-friendly web applications using modern web technologies such as HTML, CSS, JavaScript, and frameworks like React and Node.js. My journey into the world of development started with a strong foundation in Computer Science, where I developed a keen interest in solving real-world problems through code.
+                    <br><br>
+                    I am constantly learning and exploring new technologies to stay updated in this rapidly evolving field. I believe in the power of community and love connecting with like-minded professionals to share knowledge, collaborate on projects, and grow together. Currently, I am pursuing a <em>Graduate Certificate in Web Development</em> at Conestoga College in Canada, which has further enhanced my skills and opened up new opportunities for growth.
 
-        
+                    <br><br>
+                    I'm always open to collaborating on innovative projects or discussing new ideas. Feel free to reach out to me through my portfolio or connect with me on YouTube!
+                </p>        
+            </div>
+
+        <div class="hero">
+            <div class="hero-img">
+                <img src="public/sarthakgupta.png" alt="This is my Image.">
+            </div>        
+            <div class="content">
+                <p class="intro-text">"Building innovative solutions, one line of code at a time."</p>
+                <div class="buttons">
+                    <a href="https://yourportfolio.com" target="_blank">View My Portfolio</a>
+                    <a href="https://youtube.com/yourchannel" target="_blank">Visit My YouTube Channel</a>
+                </div>
+            </div>
+        </div>
     </main>
 
     <!-- This is the footer and is consistent across all pages. -->

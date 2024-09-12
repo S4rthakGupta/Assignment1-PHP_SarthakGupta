@@ -6,7 +6,7 @@
     <!-- This is the title for the Home page. -->
     <title>Form Submission Successful</title>
     <!-- Linking the CSS file which is placed in the public folder. -->
-    <link rel="stylesheet" href="public/style.css">
+    <link rel="stylesheet" href="public/CSS/style.css">
 </head>
 
 <!-- Content for the body starts from here. -->
