@@ -5,6 +5,7 @@
     font-family: system-ui;
 }
 
+/* This is the styling for the "Header" across all pages. */
 .header
 {
     display: flex;
@@ -45,6 +46,11 @@
     color: #1f0087;
 }
 
+/* This is the styling for the main body. */
+
+
+
+/* This is the styling for the "Footer" and is also consistent for all pages. */
 .footer {
     background-color: #333;
     color: #fff;
@@ -69,7 +75,7 @@
     font-size: 0.9em;
 }
 
-
+/* Media Query for screen size less than 768px to make it responsive. */
 @media only screen and (max-width: 768px)
 {
     .header 
