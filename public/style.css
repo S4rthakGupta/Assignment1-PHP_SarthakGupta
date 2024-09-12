@@ -142,6 +142,9 @@ textarea {
 .error
 {
     color: #FF0000;
+    font-style: italic;
+    font-weight: 600;
+    font-size:small;
 }
 
 

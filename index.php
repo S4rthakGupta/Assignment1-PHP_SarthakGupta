@@ -33,8 +33,19 @@
  
         if ($_SERVER["REQUEST_METHOD"] == "POST")
         {
-
+            if (empty($_POST["first_name"])) {
+                $firstNameErr = "Name is required";
+              } else {
+                $name = test_input($_POST["first_name"]);
+              }
         }
+
+        function test_input($data) {
+            $data = trim($data);
+            $data = stripslashes($data);
+            $data = htmlspecialchars($data);
+            return $data;
+          }
 
     ?>
 
@@ -44,8 +55,8 @@
         <form method="POST" class="form-grid" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
             <div class="form-group">
                 <label for="first_name">First Name:</label>
-                <input type="text" id="first_name" name="first_name">
                 <span class="error">*<?php echo $firstNameErr; ?></span>
+                <input type="text" id="first_name" name="first_name">
             </div>
 
             <div class="form-group">
