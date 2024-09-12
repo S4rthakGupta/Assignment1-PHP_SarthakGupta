@@ -145,7 +145,6 @@
         // Optional fields
         $membershipNumber = test_input($_POST["membership_number"]);
         $referralSource = test_input($_POST["referral_source"]);
-        $address = test_input($_POST["address"]);
         $medicalConditions = test_input($_POST["medical_conditions"]);
         $comment = test_input($_POST["comment"]);
 
