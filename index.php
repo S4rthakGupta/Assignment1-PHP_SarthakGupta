@@ -76,7 +76,14 @@
             $isValid = false;
         } else {
             $dateOfBirth = test_input($_POST["date_of_birth"]);
-            $isValid = false;
+            $birthDate = new DateTime($dateOfBirth);
+            $today = new DateTime();
+            $age = $today->diff($birthDate)->y;
+        
+            if ($age < 18) {
+                $dobErr = "You must be at least 18 years old to register";
+                $isValid = false;
+            }
         }
 
         // Validate Email
@@ -170,7 +177,7 @@
             <div class="form-group">
                 <span class="error">* <?php echo $dobErr; ?></span>
                 <label for="date_of_birth">Date of Birth:</label>
-                <input type="date" id="date_of_birth" name="date_of_birth" value="<?php echo $dateOfBirth; ?>">
+                <input type="date" id="date_of_birth" name="date_of_birth" value="<?php echo $dateOfBirth; ?>" max="<?php echo date('Y-m-d', strtotime('-18 years')); ?>">
             </div>
 
             <div class="form-group">
