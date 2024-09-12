@@ -115,7 +115,7 @@
             }
         }
 
-        // Validate Gender
+        // Validate Address
         if (empty($_POST["address"])) {
             $addressErr = "Address is required";
             $isValid = false;
@@ -148,8 +148,8 @@
         $address = test_input($_POST["address"]);
         $medicalConditions = test_input($_POST["medical_conditions"]);
         $comment = test_input($_POST["comment"]);
-        
 
+    }
     ?>
 
 
