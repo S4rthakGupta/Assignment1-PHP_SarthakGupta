@@ -45,9 +45,36 @@
     color: #1f0087;
 }
 
+
+/* Footer Styles */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%; 
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer p {
+    margin-top: 0;
+    font-size: 0.9em;
+}
+
 @media only screen and (max-width: 768px)
 {
-    .header {
+    .header 
+    {
         flex-direction: column;
         padding: 10px 20px;
     }
@@ -72,5 +99,14 @@
         margin: 0;
         margin-bottom: 20px;
         text-align: center; 
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer p {
+        font-size: 0.8em;
     }
 }
