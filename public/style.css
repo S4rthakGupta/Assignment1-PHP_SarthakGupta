@@ -44,12 +44,23 @@
 /* ************************************** */
 /* This is the styling for the "main" body. */
 /* ************************************** */
+
+.main-h1
+{
+    text-align: center;
+}
+
+.home-main
+{
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 main {
   margin: 20px;
   padding: 20px;
   background-color: #fff;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
 }
 .form-grid {
   display: grid;

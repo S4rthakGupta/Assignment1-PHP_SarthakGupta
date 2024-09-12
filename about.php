@@ -27,9 +27,12 @@
 
     <!-- The content for the main body starts from here. -->
     <main>
-        <?php 
+        <div class="container">
+            <h1>About Me</h1>
+        </div>
+        <p>I am Sarthak Gupta, an Aspiring Full-Stack Developer who is passionate to learn about technology and to connect with like-minded professionals in the industry</p>
 
-        ?>
+        
     </main>
 
     <!-- This is the footer and is consistent across all pages. -->

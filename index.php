@@ -15,7 +15,7 @@
 
     <!-- This is the header and the navbar. It is consistent across all pages. -->
     <header class="header">
-        <h1 id="nav-title"><span class="h-span">Fit</span>ness Class</h1>
+        <h2 id="nav-title"><span class="h-span">Fit</span>ness Class</h2>
         <nav class="navbar">
             <ul>
                 <li><a href="index.php">Home</a></li>
@@ -161,6 +161,9 @@
 
     <!-- The content for the main body starts from here. -->
     <main>
+        <div class="home-main" >
+
+        <h1 class="main-h1">Registration Form</h1>
         <form method="POST" class="form-grid" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
             <div class="form-group">
                 <span class="error">* <?php echo $firstNameErr; ?></span>
@@ -249,6 +252,8 @@
                 <input type="submit" value="Submit">
             </div>
         </form>
+        
+        </div>
     </main>
 
     <!-- This is the footer and is consistent across all pages. -->
