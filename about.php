@@ -25,8 +25,10 @@
     ?>
 </main>
 
-<footer>
-
-</footer>
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Fitness Class by Sarthak Gupta. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>

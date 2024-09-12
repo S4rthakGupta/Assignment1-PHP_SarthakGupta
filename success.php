@@ -6,6 +6,7 @@
     <title>Registration Successful</title>
     <link rel="stylesheet" href="public/style.css">
 </head>
+
 <body>
     <header class="header">
         <h1 id="nav-title"><span class="h-span">Fit</span>ness Class</h1>
@@ -21,9 +22,10 @@
 
     </main>
 
-    <footer>
-
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Fitness Class by Sarthak Gupta. All rights reserved.</p>
+        </div>
     </footer>
-
 </body>
 </html>
