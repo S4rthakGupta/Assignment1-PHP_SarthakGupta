@@ -30,12 +30,12 @@
     <div class="container">
             <h1 class="main-h1">About Me</h1>
                 <p class="intro-text">
-                    I am <i>Sarthak Gupta</i>, an aspiring<strong> Full-Stack Developer</strong> with a deep passion for technology and innovation. I specialize in creating dynamic, responsive, and user-friendly web applications using modern web technologies such as HTML, CSS, JavaScript, and frameworks like React and Node.js. My journey into the world of development started with a strong foundation in Computer Science, where I developed a keen interest in solving real-world problems through code.
+                    I am <i id="about-i">Sarthak Gupta</i>, an aspiring<strong> Full-Stack Developer</strong> with a deep passion for technology and innovation. I specialize in creating dynamic, responsive, and user-friendly web applications using modern web technologies such as HTML, CSS, JavaScript, and frameworks like React and Node.js.
                     <br><br>
-                    I am constantly learning and exploring new technologies to stay updated in this rapidly evolving field. I believe in the power of community and love connecting with like-minded professionals to share knowledge, collaborate on projects, and grow together. Currently, I am pursuing a <em>Graduate Certificate in Web Development</em> at Conestoga College in Canada, which has further enhanced my skills and opened up new opportunities for growth.
+                    I am constantly learning and exploring new technologies to stay updated in this rapidly evolving field. I believe in the power of community and love connecting with like-minded professionals to share knowledge, collaborate on projects, and grow together. Currently, I am pursuing a <em>Graduate Certificate in Web Development</em> at Conestoga College in Canada, which has further enhanced my skills.
 
                     <br><br>
-                    I'm always open to collaborating on innovative projects or discussing new ideas. Feel free to reach out to me through my portfolio or connect with me on YouTube!
+                    I'm always open to collaborating on innovative projects or discussing new ideas. Feel free to reach out to me through my portfolio!
                 </p>        
             </div>
 
@@ -46,8 +46,8 @@
             <div class="content">
                 <p class="intro-text">"Building innovative solutions, one line of code at a time."</p>
                 <div class="buttons">
-                    <a href="https://yourportfolio.com" target="_blank">View My Portfolio</a>
-                    <a href="https://youtube.com/yourchannel" target="_blank">Visit My YouTube Channel</a>
+                    <a href="https://sarthak-gupta-portfolio-website.vercel.app/" target="_blank">View My Portfolio</a>
+                    <a class="button-yt" href="https://www.youtube.com/@s4rthakgupta" target="_blank">Visit My YouTube Channel</a>
                 </div>
             </div>
         </div>

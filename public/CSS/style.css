@@ -163,9 +163,11 @@ textarea {
   margin-top: 20px;
 }
 
-.container p i
+.intro-text #about-i
 {
   text-decoration: underline;
+  font-weight: 700;
+
 }
 
 .hero {
@@ -179,7 +181,7 @@ textarea {
 
 .hero-img img {
   width: 154px;
-  height: 210px;
+  height: 156px;
   border-radius: 50%;
   border: 5px solid  rgb(1, 15, 178);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -190,7 +192,7 @@ textarea {
   font-size: 1.2rem;
   font-weight: 500;
   color: #333;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   text-align: center;
 }
 
@@ -354,4 +356,10 @@ textarea {
   .buttons a {
     text-align: center;
   } 
+
+  .button-yt
+  {
+    margin-bottom: 30px;
+  }
+
 }
