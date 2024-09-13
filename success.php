@@ -25,12 +25,13 @@
         </nav>
     </header>
 
-
+    <!-- This is the main content for the success page. -->
     <main>
         <div class="success-message">
             <h1>Thank you for registering!</h1>
             <p>Your registration has been successfully submitted.</p>
-            <!-- Button to go back to Home -->
+
+            <!-- This is a button, if clicked user goes to index.php -->
             <button class="btn-primary" onclick="window.location.href='index.php'">Go back to Home</button>
         </div>
     </main>
