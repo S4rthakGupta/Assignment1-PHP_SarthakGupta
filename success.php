@@ -11,7 +11,6 @@
 
 <!-- Content for the body starts from here. -->
 <body>
-
     <!-- This is the header and the navbar. It is consistent across all pages. -->
     <header class="header">
         <h1 id="nav-title"><span class="h-span">Fit</span>ness Class</h1>
