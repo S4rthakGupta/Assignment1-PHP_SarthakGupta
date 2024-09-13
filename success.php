@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- This is the title for the Home page. -->
+    <!-- This is the title for the Success page. -->
     <title>Form Submission Successful</title>
     <!-- Linking the CSS file which is placed in the public folder. -->
     <link rel="stylesheet" href="public/CSS/style.css">

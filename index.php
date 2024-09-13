@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,132 +25,191 @@
         </nav>
     </header>
 
+    <!-- This is the PHP code below -->
+    
     <?php
+
+    // Initializing error variables for each form field. 
+    // These will store any error messages to be displayed if the user input is invalid.
     $firstNameErr = $lastNameErr = $dobErr = $emailErr = $phoneErr = $emergencyContactErr = $genderErr = $batchErr = $addressErr = "";
+    
+    // Initialzing variables to store the input.
+    // These will hold the values entered in the form, which can later be validated and processed.
     $firstName = $lastName = $dateOfBirth = $email = $phoneNumber = $emergencyContact = $membershipNumber = $referralSource = $address = $gender = $batch = $medicalConditions = $comment = "";
 
-    // Function to sanitize input data
+
+    // This is a function to sanitize (clean) input data.
     function test_input($data)
     {
+        // Remove unnecessary spaces from the beginning and the end of the input.
         $data = trim($data);
+
+        // Remove backlashes from the input.
         $data = stripslashes($data);
+
+        // This below line converts special characters to HTML entities to prevent XSS attacks.
         $data = htmlspecialchars($data);
         return $data;
     }
 
-    // Check if form is submitted
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // This below if-statement checks if the form has been submitted using the POST method.
+    if ($_SERVER["REQUEST_METHOD"] == "POST") 
+    {
+        // This below is a flag to check if form is valid.
+        $isValid = true; 
 
-        $isValid = true; // Flag to check if form is valid
-
-        // Validate First Name
-        if (empty($_POST["first_name"])) {
+        // Validating the First Name.
+        if (empty($_POST["first_name"])) 
+        {           
+            // This below line will check if the first name field is empty, and if it is then it will display an error message
             $firstNameErr = "First Name is required";
             $isValid = false;
-        } else {
+        } 
+        else 
+        {
             $firstName = test_input($_POST["first_name"]);
-            if (!preg_match("/^[a-zA-Z-' ]*$/", $firstName)) {
+            // This is a pattern which makes sures that only spaces or characters are entered.
+            if (!preg_match("/^[a-zA-Z-' ]*$/", $firstName)) 
+            {
                 $firstNameErr = "Only letters and spaces are allowed";
                 $isValid = false;
             }
         }
 
-        // Validate Last Name
-        if (empty($_POST["last_name"])) {
+
+        // Validating Last Name.
+        if (empty($_POST["last_name"])) 
+        {
             $lastNameErr = "Last Name is required";
             $isValid = false;
-        } else {
+        } 
+        else 
+        {
             $lastName = test_input($_POST["last_name"]);
-            if (!preg_match("/^[a-zA-Z-' ]*$/", $lastName)) {
+            if (!preg_match("/^[a-zA-Z-' ]*$/", $lastName)) 
+            {
                 $lastNameErr = "Only letters and spaces are allowed";
                 $isValid = false;
             }
         }
 
-        // Validate Date of Birth
-        if (empty($_POST["date_of_birth"])) {
+        // Validate Date of Birth.
+        if (empty($_POST["date_of_birth"])) 
+        {
             $dobErr = "Date of Birth is required";
             $isValid = false;
-        } else {
+        } 
+        else 
+        {
             $dateOfBirth = test_input($_POST["date_of_birth"]);
+
+            // This is a validation to check if the user is above 18+ years or not.
             $birthDate = new DateTime($dateOfBirth);
             $today = new DateTime();
+
+            // It only displays the years and dates in the calender for users who are 18+, rest all years are disabled.
             $age = $today->diff($birthDate)->y;
 
-            if ($age < 18) {
+            if ($age < 18) 
+            {
                 $dobErr = "You must be at least 18 years old to register";
                 $isValid = false;
             }
         }
 
-        // Validate Email
-        if (empty($_POST["email"])) {
+        // Validate Email.
+        if (empty($_POST["email"])) 
+        {
             $emailErr = "Email is required";
             $isValid = false;
-        } else {
+        } 
+        else 
+        {
             $email = test_input($_POST["email"]);
-            if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            // This below pattern checks if the email address is valid.
+            if (!preg_match("/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/", $email)) 
+            {
                 $emailErr = "Invalid email format";
                 $isValid = false;
             }
         }
 
-        // Validate Phone Number
-        if (empty($_POST["phone_number"])) {
+        // Validate Phone Number.
+        if (empty($_POST["phone_number"])) 
+        {
             $phoneErr = "Phone Number is required";
             $isValid = false;
-        } else {
+        } 
+        else 
+        {
             $phoneNumber = test_input($_POST["phone_number"]);
-            if (!preg_match("/^[0-9]{10}$/", $phoneNumber)) {
+            // This pattern checks if the phone number entered by user is correct or not and also checks if digits are more than 10.
+            if (!preg_match("/^[0-9]{10}$/", $phoneNumber)) 
+            {
                 $phoneErr = "Invalid phone number format";
                 $isValid = false;
             }
         }
 
-        // Validate Emergency Contact
-        if (empty($_POST["emergency_contact"])) {
+        // Validate Emergency Contact.
+        if (empty($_POST["emergency_contact"])) 
+        {
             $emergencyContactErr = "Emergency Contact Number is required";
             $isValid = false;
-        } else {
+        } 
+        else 
+        {
             $emergencyContact = test_input($_POST["emergency_contact"]);
-            if (!preg_match("/^[0-9]{10}$/", $emergencyContact)) {
+            // This is also checking if the phone number entered is in a correct pattern.
+            if (!preg_match("/^[0-9]{10}$/", $emergencyContact)) 
+            {
                 $emergencyContactErr = "Invalid phone number format";
                 $isValid = false;
             }
         }
 
-        // Validate Address
-        if (empty($_POST["address"])) {
+        // Validate Address.
+        if (empty($_POST["address"])) 
+        {
             $addressErr = "Address is required";
             $isValid = false;
-        } else {
+        } 
+        else 
+        {
             $address = test_input($_POST["address"]);
         }
 
-        // Validate Gender
-        if (empty($_POST["gender"])) {
+        // Validate Gender.
+        if (empty($_POST["gender"])) 
+        {
             $genderErr = "Gender is required";
             $isValid = false;
-        } else {
+        } 
+        else 
+        {
             $gender = test_input($_POST["gender"]);
         }
 
-        // Validate Batch
-        if (empty($_POST["batch"])) {
+        // Validate Batch.
+        if (empty($_POST["batch"])) 
+        {
             $batchErr = "Please choose a batch";
             $isValid = false;
-        } else {
+        } 
+        else 
+        {
             $batch = test_input($_POST["batch"]);
         }
 
-        // Optional fields
+        // These are the Optional fields.
         $membershipNumber = test_input($_POST["membership_number"]);
         $referralSource = test_input($_POST["referral_source"]);
         $medicalConditions = test_input($_POST["medical_conditions"]);
         $comment = test_input($_POST["comment"]);
 
-        // Redirect to success.php if all validations are correct
-        if ($isValid) {
+        // Redirects to success.php page if all validations are correct.
+        if ($isValid) 
+        {
             header("Location: success.php");
             exit();
         }
@@ -161,11 +219,18 @@
 
     <!-- The content for the main body starts from here. -->
     <main>
-        <div class="home-main" >
 
+        <!-- This is the div for the home. -->
+        <div class="home-main" >
         <h1 class="main-h1">Registration Form</h1>
+
+        <!-- The form element starts here. -->
+        <!-- The 'action' attribute uses PHP's 'htmlspecialchars' function to prevent XSS attacks by escaping special characters in the current page's URL. -->
         <form method="POST" class="form-grid" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
             <div class="form-group">
+
+                <!-- This below is a span which is style with .error in red colour in CSS -->
+                 <!-- It echo's the validation error if their is any. -->
                 <span class="error">* <?php echo $firstNameErr; ?></span>
                 <label for="first_name">First Name:</label>
                 <input type="text" id="first_name" name="first_name" value="<?php echo $firstName; ?>">
@@ -186,7 +251,7 @@
             <div class="form-group">
                 <span class="error">* <?php echo $emailErr; ?></span>
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" value="<?php echo $email; ?>">
+                <input type="text" id="email" name="email" value="<?php echo $email; ?>">
             </div>
 
             <div class="form-group">
@@ -254,6 +319,7 @@
         </form>
         </div>
     </main>
+    <!-- Main body ends here. -->
 
     <!-- This is the footer and is consistent across all pages. -->
     <footer class="footer">
