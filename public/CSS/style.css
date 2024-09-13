@@ -1,3 +1,7 @@
+/* ****************************** */
+/* CSS starts here. */
+/* ****************************** */
+
 * {
   margin: 0;
   padding: 0;
@@ -44,17 +48,14 @@
 /* ************************************** */
 /* This is the styling for the "main" body. */
 /* ************************************** */
-
-.main-h1
-{
-    text-align: center;
-    color: #1f0087;;
-    margin-bottom: 20px;
+.main-h1 {
+  text-align: center;
+  color: #1f0087;
+  margin-bottom: 20px;
 }
 
-.home-main
-{
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.home-main {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 main {
@@ -62,8 +63,8 @@ main {
   padding: 20px;
   background-color: #fff;
   border-radius: 8px;
-  
 }
+
 .form-grid {
   display: grid;
   gap: 20px;
@@ -144,7 +145,6 @@ textarea {
 /* ************************************** */
 /* This is the styling for the "ERROR" Span - Validation. */
 /* ************************************** */
-
 .error {
   color: #ff0000;
   font-style: italic;
@@ -152,22 +152,19 @@ textarea {
   font-size: small;
 }
 
-
 /* ************************************** */
 /* This is the styling for the "about.php" */
 /* ************************************** */
 .container {
   text-align: center;
   padding: 10px 11px;
-  border-top: 4px solid  rgb(1, 15, 178);
+  border-top: 4px solid rgb(1, 15, 178);
   margin-top: 20px;
 }
 
-.intro-text #about-i
-{
+.intro-text #about-i {
   text-decoration: underline;
   font-weight: 700;
-
 }
 
 .hero {
@@ -183,7 +180,7 @@ textarea {
   width: 154px;
   height: 156px;
   border-radius: 50%;
-  border: 5px solid  rgb(1, 15, 178);
+  border: 5px solid rgb(1, 15, 178);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
 }
@@ -207,7 +204,7 @@ textarea {
 .buttons a {
   text-decoration: none;
   color: #fff;
-  background-color:  rgb(1, 15, 178);
+  background-color: rgb(1, 15, 178);
   padding: 10px 25px;
   border-radius: 5px;
   border: 2px solid transparent;
@@ -215,14 +212,15 @@ textarea {
 }
 
 .buttons a:hover {
-  background-color: transparent; 
-  color:  rgb(1, 15, 178);
-  border: 2px solid  rgb(1, 15, 178); 
+  background-color: transparent;
+  color: rgb(1, 15, 178);
+  border: 2px solid rgb(1, 15, 178);
 }
+
+
 /* ************************************** */
 /* This is the styling for the "succes.php" */
 /* ************************************** */
-
 .success-message {
   max-width: 600px;
   margin: 0 auto;
@@ -351,15 +349,17 @@ textarea {
 
   .buttons {
     flex-direction: column;
-  } 
+  }
 
   .buttons a {
     text-align: center;
-  } 
-
-  .button-yt
-  {
-    margin-bottom: 30px;
   }
 
+  .button-yt {
+    margin-bottom: 30px;
+  }
 }
+
+/* ****************************** */
+/* CSS ends here. */
+/* ****************************** */
